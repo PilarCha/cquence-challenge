@@ -6,10 +6,20 @@ function GetAllVideos () {
 
   // do this after render
   React.useEffect(() => {
-    fetch("/video")
+    fetch("http://localhost:3000/videos")
       .then((res) => res.json())
       .then((data) => setData(data));
-  }, [])  
+  }, []);
+
+  return (
+    <div style={{ height: 300, width: '100%' }}>
+      {data ? (
+        <div>We got data</div>
+      ) : (
+        <p> Loadiiiing </p>
+      )}
+    </div>
+  )
 }
 
 export default GetAllVideos;
