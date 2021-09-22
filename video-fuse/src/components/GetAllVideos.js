@@ -1,5 +1,5 @@
-import * from React from 'react';
-import { DataGrid } from '@material-ui-grid'
+import * as React from 'react';
+// import { DataGrid } from '@material-ui-grid'
 
 function GetAllVideos () {
   const [data, setData] = React.useState(null);
@@ -9,7 +9,7 @@ function GetAllVideos () {
     fetch("/video")
       .then((res) => res.json())
       .then((data) => setData(data));
-  }, [])
+  }, [])  
 }
 
-export default GettAllVideos;
+export default GetAllVideos;
