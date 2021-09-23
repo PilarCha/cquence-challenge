@@ -16,7 +16,7 @@ function GetAllVideos () {
       {data ? (
         <div>
             {data.map(video => (
-              <VideoPoster video = {video}/>
+              <VideoPoster key={video.id} video = {video}/>
             ))}
         </div>
       ) : (
