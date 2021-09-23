@@ -3,7 +3,7 @@ import Card from '@mui/material/Card'
 import CardMedia from '@mui/material/CardMedia'
 
 const VideoPoster = ({video}) => (
-  <Card sx={{ maxWidth: 345 }} key = {video.id}>
+  <Card sx={{ maxWidth: 445 }} key = {video.id}>
     <CardMedia
       component="img"
       height="200"

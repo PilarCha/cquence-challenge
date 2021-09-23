@@ -1,11 +1,17 @@
 import * as React from 'react';
 import GetAllVideos from './components/GetAllVideos.js'
+import CssBaseline from '@mui/material/CssBaseline';
+import Container from '@mui/material/Container';
+
 function App() {
   return (
-    <div>
-      <h1>Video Fuse</h1>
-      <GetAllVideos/>
-    </div>
+    <>
+      <CssBaseline/>
+      <Container maxWidth={false}>
+        <h1>Video Fuse</h1>
+        <GetAllVideos/>
+      </Container>
+    </>
   );
 }
 
