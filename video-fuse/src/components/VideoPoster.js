@@ -4,13 +4,27 @@ import CardMedia from '@mui/material/CardMedia'
 
 function VideoPoster({video}) {
 
-  function handleClick(video) {
-    alert(video.id)
+  // styles
+  const disabled = {
+    opacity:'0.5'
+  }
+
+  const active = {
+    cursor:'pointer'
+  }
+
+  const [disable, setDisable] = React.useState(null);
+
+  const handleClick = (video) => {
+    if(!disable) {
+      setDisable(true);
+    }
   }
 
   return (
-    <Card sx={{ maxWidth: 445 }} key = {video.id}>
+    <Card sx={{ maxWidth: 445, margin: 2 }} key = {video.id}>
       <CardMedia
+        style={{ ...disable ? {opacity:'0.5'} : {cursor:"pointer"}}}
         component="img"
         height="200"
         image={video.poster}
