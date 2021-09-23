@@ -13,7 +13,7 @@ function GetAllVideos () {
         data = data.slice(0,8);
         setData(data);
       })
-  }, []);
+  }, []);  
 
   return (
     <Grid sx={{flexGrow: 1}} container spacing={8}>
