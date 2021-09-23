@@ -4,15 +4,6 @@ import CardMedia from '@mui/material/CardMedia'
 
 function VideoPoster({video}) {
 
-  // styles
-  const disabled = {
-    opacity:'0.5'
-  }
-
-  const active = {
-    cursor:'pointer'
-  }
-
   const [disable, setDisable] = React.useState(null);
 
   const handleClick = (video) => {
