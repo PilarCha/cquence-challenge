@@ -5,6 +5,7 @@ import Container from '@mui/material/Container';
 
 function App() {
   return (
+    // Fun thing.<> React uses this as a React.fragment. Keeps React from loading uneccessary divs. 
     <>
       <CssBaseline/>
       <Container maxWidth={false}>
