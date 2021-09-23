@@ -1,6 +1,5 @@
 import * as React from 'react';
-import { Card } from '@mui/material/Card'
-import CardMedia from '@mui/material/CardMedia'
+import VideoPoster from './VideoPoster.js'
 
 function GetAllVideos () {
   const [data, setData] = React.useState(null);
@@ -13,9 +12,13 @@ function GetAllVideos () {
   }, []);
 
   return (
-    <div style={{ height: 300, width: '100%' }}>
+    <div >
       {data ? (
-        <div>We got data</div>
+        <div>
+            {data.map(video => (
+              <VideoPoster video = {video}/>
+            ))}
+        </div>
       ) : (
         <p> Loadiiiing </p>
       )}
