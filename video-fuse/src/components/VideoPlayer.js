@@ -10,7 +10,10 @@ function VideoPlayer() {
 
   const playNext = () => {
     const nextIdx = vidIdx + 1;
-    setVidIdx(nextIdx)
+    if(nextIdx >= array.length) {
+      return setVidIdx(0);
+    }
+    return setVidIdx(nextIdx)
   }
 
   return (
