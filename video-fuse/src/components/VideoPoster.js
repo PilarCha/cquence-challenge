@@ -12,7 +12,7 @@ function VideoPoster({video}) {
   const handleClick = (video) => {
     if(!disable) {
       setDisable(true);
-      setArray(array => [...array, video])
+      setArray(array => [...array, video.source])
     }
   }
 
