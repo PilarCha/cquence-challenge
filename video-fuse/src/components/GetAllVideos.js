@@ -13,7 +13,7 @@ function GetAllVideos () {
         data = data.slice(0,8);
         setData(data);
       })
-  }, []);  
+  }, []);
 
   return (
     <Grid sx={{flexGrow: 1}} container spacing={8}>
@@ -22,7 +22,7 @@ function GetAllVideos () {
           <Grid item xs={12}>
             <Grid container justifyContent="center" spacing={2}>
               {data.map(video => (
-                <VideoPoster key={video.id} video = {video}/>
+                <VideoPoster key={video.id} video={video}/>
               ))}
             </Grid>
           </Grid>
