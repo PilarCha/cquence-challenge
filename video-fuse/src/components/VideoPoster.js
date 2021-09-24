@@ -1,14 +1,18 @@
 import * as React from 'react';
-import Card from '@mui/material/Card'
-import CardMedia from '@mui/material/CardMedia'
+import { useContext } from 'react';
+import ArrayContext from '../context/ArrayContext.js'
+import Card from '@mui/material/Card';
+import CardMedia from '@mui/material/CardMedia';
 
 function VideoPoster({video}) {
 
   const [disable, setDisable] = React.useState(null);
+  const { setArray } = useContext(ArrayContext);
 
   const handleClick = (video) => {
     if(!disable) {
       setDisable(true);
+      setArray(array => [...array, video])
     }
   }
 
