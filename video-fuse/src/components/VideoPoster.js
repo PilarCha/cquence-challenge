@@ -8,7 +8,7 @@ function VideoPoster({video}) {
 
   const [disable, setDisable] = React.useState(null);
   const { setArray } = useContext(ArrayContext);
-
+  // push url source of video into array
   const handleClick = (video) => {
     if(!disable) {
       setDisable(true);

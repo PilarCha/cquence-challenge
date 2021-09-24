@@ -5,7 +5,6 @@ import Grid from '@mui/material/Grid';
 function GetAllVideos () {
   const [data, setData] = React.useState(null);
 
-  // do this after render
   React.useEffect(() => {
     fetch("http://localhost:3000/videos")
       .then((res) => res.json())

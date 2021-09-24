@@ -3,9 +3,9 @@ import { useContext, useState } from 'react';
 import ArrayContext from '../context/ArrayContext.js'
 
 function VideoPlayer() {
-
+  // the array populated from VideoPoster.js
   const {array} = useContext(ArrayContext);
-
+  // we use this to keep count on the currentIdx
   const [vidIdx, setVidIdx] = useState(0);
 
   const playNext = () => {
