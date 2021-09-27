@@ -1,3 +1,7 @@
+##Instructions on How to Run Application
+
+## Instructions of Project
+
 ## Cquence Front-End Coding Challenge (Video Fuse)
 
 ### Description
