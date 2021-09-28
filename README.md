@@ -14,7 +14,7 @@
 
 - [ ] cd into `video-fuse` folder and run `npm run test`
 - [ ] When prompted type `a` to run all tests.
-- I have incorporated 3 automatic tests
+- I have incorporated 4 automatic tests
 
 ## Things I would do before shipping to production
 - Include more error handling logic. A lot of my code doesn't take into account if the server is down.
