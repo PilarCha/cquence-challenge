@@ -16,10 +16,11 @@ function VideoPlayer() {
     return setVidIdx(nextIdx)
   }
 
-  return (
+  return (        
     <ReactPlayer
       url = {array[vidIdx]}
       onEnded={playNext}
+      playing={array.length > 1 ? true : false}
       controls
     />
   )

@@ -32,6 +32,7 @@ describe("Video Poster", () => {
     expect(linkElement).toHaveStyle('opacity:0.5');
   });
 }) 
+
 // must have server running 
 describe("VideosList", () => {
   it("should render getAllVideos component correctly", async () => {

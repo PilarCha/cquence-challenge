@@ -17,10 +17,10 @@
 - I have incorporated 3 automatic tests
 
 ## Things I would do before shipping to production
-- More catches for errors. A lot of my code doesn't take into account if the server is down.
-- Include status Codes into the response from the server. 100-500 codes
-- Have the api return 8 results from the db. Having the Frontend due so isn't optimal.
-- Incorporate E2E testing. Since this is just a prototype we don't know how the final product will look. The UI will probably change. 
+- Include more error handling logic. A lot of my code doesn't take into account if the server is down.
+- Include standard status codes into the server responses.
+- Add logic to API call to return the 8 results.
+- Incorporate E2E testing.
 
 ## Cquence Front-End Coding Challenge (Video Fuse)
 
