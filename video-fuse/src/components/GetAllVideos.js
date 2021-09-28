@@ -6,12 +6,13 @@ function GetAllVideos () {
   const [data, setData] = React.useState(null);
 
   React.useEffect(() => {
-    fetch("http://localhost:3000/videos")
-      .then((res) => res.json())
-      .then((data) => {
-        data = data.slice(0,8);
-        setData(data);
-      })
+    async function fetchVideoApi() {
+      let response = await fetch("http://localhost:3000/videos")
+      response = await response.json();
+      response = response.slice(0,8);
+      setData(response)
+    }
+    fetchVideoApi();
   }, []);
 
   return (
