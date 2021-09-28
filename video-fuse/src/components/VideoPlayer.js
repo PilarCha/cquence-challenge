@@ -23,6 +23,7 @@ function VideoPlayer() {
 
   return (        
     <ReactPlayer
+      data-testid="react-player-element"
       url = {array[vidIdx]}
       onStart= {setToAutoPlay}
       onEnded= {playNext}
