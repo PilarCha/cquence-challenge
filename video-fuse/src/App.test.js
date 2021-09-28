@@ -1,7 +1,7 @@
 import { fireEvent, render, screen } from '@testing-library/react';
 import VideoPoster from './components/VideoPoster';
-// import VideoPlayer from './components/VideoPlayer'
-import { ArrayContext, ArrayContextProvider } from './context/ArrayContext';
+import { ArrayContextProvider } from './context/ArrayContext';
+import GetAllVideos from './components/GetAllVideos';
 
 const videoEx = {
   "id": "25ff984c-e79d-460c-a75f-489e58425656",
@@ -11,7 +11,7 @@ const videoEx = {
 
 describe("Video Poster", () => {
   
-  it('renders a video Poster', async () => {   
+  it('renders a video Poster when given 1', async () => {   
     render(<VideoPoster key={1} video={videoEx}/>);
     const linkElement = screen.getAllByRole('img');
     expect(linkElement.length).toBe(1);
@@ -32,7 +32,12 @@ describe("Video Poster", () => {
     expect(linkElement).toHaveStyle('opacity:0.5');
   });
 }) 
-
-// describe("ArrayContext", () => {
-// })
+// must have server running 
+describe("VideosList", () => {
+  it("should render getAllVideos component correctly", async () => {
+    render(<GetAllVideos/>)
+    const videosDivElement = await screen.findAllByRole("img")
+    expect(videosDivElement.length).toBe(8);
+  })
+})
 
