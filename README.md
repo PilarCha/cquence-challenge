@@ -1,6 +1,26 @@
-##Instructions on How to Run Application
+## Instructions on How to Run Application
 
-## Instructions of Project
+### FrontEnd Setup
+
+- [ ] Run `npm install` within the `video-fuse` folder
+- [ ] Run `npm start`
+
+### BackEnd Setup
+
+- [ ] Run `npm install` within the `video-fuse-api` folder
+- [ ] Run `npm start`
+
+## Run Tests
+
+- [ ] cd into `video-fuse` folder and run `npm run test`
+- [ ] When prompted type `a` to run all tests.
+- I have incorporated 3 automatic tests
+
+## Things I would do before shipping to production
+- More catches for errors. A lot of my code doesn't take into account if the server is down.
+- Include status Codes into the response from the server. 100-500 codes
+- Have the api return 8 results from the db. Having the Frontend due so isn't optimal.
+- Incorporate E2E testing. Since this is just a prototype we don't know how the final product will look. The UI will probably change. 
 
 ## Cquence Front-End Coding Challenge (Video Fuse)
 
