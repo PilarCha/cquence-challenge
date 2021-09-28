@@ -5,20 +5,28 @@ import ArrayContext from '../context/ArrayContext.js'
 function VideoPlayer() {
   const {array} = useContext(ArrayContext);
   const [vidIdx, setVidIdx] = useState(0);
+  const [autoPlay, setAutoPlay] = useState(false);
 
   const playNext = () => {
     const nextIdx = vidIdx + 1;
     if(nextIdx >= array.length) {
-      return setVidIdx(0);
+      setVidIdx(0);
+      setAutoPlay(false);
+      return;
     }
     return setVidIdx(nextIdx)
+  }
+
+  const setToAutoPlay = () => {
+    setAutoPlay(true);
   }
 
   return (        
     <ReactPlayer
       url = {array[vidIdx]}
-      onEnded={playNext}
-      playing={array.length > 1 ? true : false}
+      onStart= {setToAutoPlay}
+      onEnded= {playNext}
+      playing={autoPlay}
       controls
     />
   )
