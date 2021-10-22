@@ -17,6 +17,7 @@
 - I have incorporated 4 automatic tests
 
 ## Things I would do before shipping to production
+
 - Include more error handling logic. A lot of my code doesn't take into account if the server is down.
 - Include standard status codes into the server responses.
 - Add logic to API call to return the 8 results.
@@ -57,12 +58,3 @@ The steps below help explain the user experience and interactions:
 - The **Video Fuse API** uses [json-server](https://github.com/typicode/json-server) to expose a JSON file as a REST API. You must have Node.js installed. You can run it by navigating into the video-fuse-api folder and running `npm install` followed by `npm start`. Fetch videos with `curl http://localhost:3000/videos`
 - Feel free to start your project from scratch or use boilerplate code.
 - Think of this project as a proof of concept that you want to build in an evening or two to get fast feedback. The UX has to work as described above, but the design itself is not that important. We are not expecting your code to be production ready, but your explanation will help fill that gap.
-- If you have any questions or need further clarification, please reach out to dom@cquence.app. We value a collaborative work environment and encourage you not to make assumptions. If there's anything you'd like further clarity around, we'd love to hear from you and guide you towards a great submission!
-
-### Code Submission
-
-Please organize, design, test and document your code for evaluation - then push your changes to a new branch and create a PR. Please let us know when your code is ready to review. We will evaluate your submission and get back to you within a few business days.
-
-Good luck!  
-_The Cquence Team_  
-dom@cquence.app
