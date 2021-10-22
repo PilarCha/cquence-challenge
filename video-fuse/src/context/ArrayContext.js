@@ -4,11 +4,11 @@ const ArrayContext = createContext({});
 
 export default ArrayContext;
 
-export function ArrayContextProvider({children}) {
-  const [array,setArray] = useState([]);
+export function ArrayContextProvider({ children }) {
+  const [array, setArray] = useState([]);
   return (
-    <ArrayContext.Provider value = {{array, setArray}}>
+    <ArrayContext.Provider value={{ array, setArray }}>
       {children}
     </ArrayContext.Provider>
-  )
+  );
 }
