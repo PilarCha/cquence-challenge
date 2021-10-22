@@ -1,25 +1,24 @@
-import * as React from 'react';
-import { useContext } from 'react';
-import ArrayContext from '../context/ArrayContext.js'
-import Card from '@mui/material/Card';
-import CardMedia from '@mui/material/CardMedia';
+import * as React from "react";
+import { useContext } from "react";
+import ArrayContext from "../context/ArrayContext.js";
+import Card from "@mui/material/Card";
+import CardMedia from "@mui/material/CardMedia";
 
-function VideoPoster({video}) {
-
+function VideoPoster({ video }) {
   const [disable, setDisable] = React.useState(null);
   const { setArray } = useContext(ArrayContext);
   // push url source of video into array
   const handleClick = (video) => {
-    if(!disable) {
+    if (!disable) {
       setDisable(true);
-      setArray(array => [...array, video.source])
+      setArray((array) => [...array, video.source]);
     }
-  }
+  };
 
   return (
-    <Card sx={{ maxWidth: 445, margin: 2 }} key = {video.id}>
+    <Card sx={{ maxWidth: 445, margin: 2 }} key={video.id}>
       <CardMedia
-        style={{ ...disable ? {opacity:'0.5'} : {cursor:"pointer"}}}
+        style={{ ...(disable ? { opacity: "0.5" } : { cursor: "pointer" }) }}
         component="img"
         height="200"
         image={video.poster}
@@ -27,7 +26,7 @@ function VideoPoster({video}) {
         onClick={() => handleClick(video)}
       />
     </Card>
-  )
+  );
 }
 
-export default VideoPoster
+export default VideoPoster;
