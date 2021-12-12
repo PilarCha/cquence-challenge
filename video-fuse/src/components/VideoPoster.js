@@ -5,20 +5,26 @@ import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 
 function VideoPoster({ video }) {
-  const [disable, setDisable] = React.useState(null);
+  const [selected, setSelected] = React.useState(null);
   const { setArray } = useContext(ArrayContext);
   // push url source of video into array
   const handleClick = (video) => {
-    if (!disable) {
-      setDisable(true);
-      setArray((array) => [...array, video.source]);
+    if (!selected) {
+      setSelected(true);
+      return setArray((array) => [...array, video.source]);
+    } else {
+      setSelected(false);
+      setArray((array) => {
+        const newVidArr = array.filter((item) => item !== video.source);
+        setArray(newVidArr);
+      });
     }
   };
 
   return (
     <Card sx={{ maxWidth: 445, margin: 2 }} key={video.id}>
       <CardMedia
-        style={{ ...(disable ? { opacity: "0.5" } : { cursor: "pointer" }) }}
+        style={{ ...(selected ? { opacity: "0.5" } : { opacity: "1" }) }}
         component="img"
         height="200"
         image={video.poster}
